@@ -16,33 +16,35 @@ def job_entry():
     
     while True:
         data_in = input("Enter Job/Contract Number: ")
-        confirm = input("Is ",data_in," correct?(y/n) ")
-        if confirm == 'y':
-            job_table.update('jobID',data_in)
-            False
+        confirm_in = input("Is "+str(data_in)+" correct?(y/n) ")
+        if confirm_in == 'y':
+            job_table.update({'jobID':data_in})
+            break
     
     while True:
         data_in = input("Enter Due Date(MMDDYYY): ")
-        confirm = input("Is ",data_in," correct?(y/n) ")
-        if confirm == 'y':
-            job_table.update('dueDate',datetime.strptime(data_in,"%m%d%Y"))
-            False
+        confirm_in = input("Is "+str(data_in)+" correct?(y/n) ")
+        if confirm_in == 'y':
+            job_table.update({'dueDate':datetime.strptime(data_in,"%m%d%Y")})
+            break
     
     while True:
         data_in = input("Enter QTY: ")
-        confirm = input("Is ",data_in," correct?(y/n) ")
-        if confirm == 'y':
-            job_table.update('QTY',data_in)
-            False
+        confirm_in = input("Is "+str(data_in)+" correct?(y/n) ")
+        if confirm_in == 'y':
+            job_table.update({'QTY':data_in})
+            break
     
     while True:
         data_in = input("Enter Price(Numbers only): ")
-        confirm = input("Is ",data_in," correct?(y/n) ")
-        if confirm == 'y':
-            job_table.update('Price',data_in)
-            False
+        confirm_in = input("Is "+str(data_in)+" correct?(y/n) ")
+        if confirm_in == 'y':
+            job_table.update({'Price':data_in})
+            break
     
-    job_table.update("createDate",datetime.now())
+    job_table.update({"createDate":datetime.now()})
+    
+    print (job_table)
     
     
     
