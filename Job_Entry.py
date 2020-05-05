@@ -8,47 +8,48 @@ Created on Mon May  4 19:09:52 2020
 
 @author: gary
 """
-import datetime
+from datetime import datetime
 
 job_table = {}
 
 def job_entry():
     
-    While True:
+    while True:
         data_in = input("Enter Job/Contract Number: ")
         confirm = input("Is ",data_in," correct?(y/n) ")
-        if confirm === 'y':
+        if confirm == 'y':
             job_table.update('jobID',data_in)
             False
     
-    While True:
+    while True:
         data_in = input("Enter Due Date(MMDDYYY): ")
         confirm = input("Is ",data_in," correct?(y/n) ")
-        if confirm === 'y':
+        if confirm == 'y':
             job_table.update('dueDate',datetime.strptime(data_in,"%m%d%Y"))
             False
     
-    While True:
+    while True:
         data_in = input("Enter QTY: ")
         confirm = input("Is ",data_in," correct?(y/n) ")
-        if confirm === 'y':
+        if confirm == 'y':
             job_table.update('QTY',data_in)
             False
     
-    While True:
+    while True:
         data_in = input("Enter Price(Numbers only): ")
         confirm = input("Is ",data_in," correct?(y/n) ")
-        if confirm === 'y':
+        if confirm == 'y':
             job_table.update('Price',data_in)
             False
     
-    
+    job_table.update("createDate",datetime.now())
     
     
     
 def main():
     while True:
-        Try:
+        try:
             job_entry()
-        Except:
-            False
+        except:
+            pass
+            break
