@@ -53,3 +53,5 @@ def main():
         except:
             pass
             break
+
+main()
