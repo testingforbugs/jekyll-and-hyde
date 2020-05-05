@@ -8,10 +8,12 @@ Created on Mon May  4 19:09:52 2020
 
 @author: gary
 """
+import datetime
 
 job_table = {}
 
 def job_entry():
+    
     While True:
         data_in = input("Enter Job/Contract Number: ")
         confirm = input("Is ",data_in," correct?(y/n) ")
@@ -23,7 +25,7 @@ def job_entry():
         data_in = input("Enter Due Date(MMDDYYY): ")
         confirm = input("Is ",data_in," correct?(y/n) ")
         if confirm === 'y':
-            job_table.update('dueDate',data_in)
+            job_table.update('dueDate',datetime.strptime(data_in,"%m%d%Y"))
             False
     
     While True:
@@ -39,6 +41,8 @@ def job_entry():
         if confirm === 'y':
             job_table.update('Price',data_in)
             False
+    
+    
     
     
     
